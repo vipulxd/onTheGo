@@ -1,0 +1,23 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; background-color: #181d2a }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.color-dark{
+  background-color: #181d2a !important;
+  color:white;
+}
+.color-light {
+  background-color: #2e74b7 !important;
+color: white;
+}
+.border-light{
+  border : 1px solid #2e74b7;
+  border-radius: 4px;
+}
+.text-large{
+  text-align: center;
+  color: #2e74b7;
+font-weight: bolder;
+  font-size: 100px;
+}
