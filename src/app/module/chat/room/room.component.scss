@@ -1,0 +1,31 @@
+.container {
+  height:100%;
+  display : grid;
+  grid-template-rows :5% 90% 5%;
+  grid-row-gap: 10px;
+  overflow: hidden;
+
+}
+.input-container{
+  margin: 20px 0px;
+  align-items: end;
+  display: flex;
+  justify-content: space-evenly;
+  .icon {
+    align-items: start;
+  }
+}
+.text {
+  width:100%;
+}
+.message-container{
+  margin:0px 20px;
+  overflow-y: scroll;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+}
+
+.text-left {
+  text-align: start;
+}
+
