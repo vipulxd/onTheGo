@@ -1,259 +1,62 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import {AfterViewInit, Component, ElementRef, OnDestroy, OnInit, ViewChild} from '@angular/core';
+import {MessageService} from 'src/app/services/message.service';
+import {RunnerService} from 'src/app/services/runner.service';
 
 @Component({
   selector: 'app-room',
   templateUrl: './room.component.html',
   styleUrls: ['./room.component.scss']
 })
-export class RoomComponent implements OnInit {
-public selfID = 1
-    public selfIP = '127.0.0.1'
-    // @ts-ignore
-    @ViewChild('scrollMe') private myScrollContainer: ElementRef;
+export class RoomComponent implements OnInit, AfterViewInit , OnDestroy {
+  public selfID = 1
+  public selfIP = '127.0.0.1'
+  // @ts-ignore
+  @ViewChild('scrollMe') private myScrollContainer: ElementRef;
+  public message: string = '';
+  public data = []
 
-    public data = [
-    {
-      message:"helo",
-      senderID: 1,
-        sender_name: "127.0.0.1"
-    },
-    {
-      message : "How are you",
-      senderID: 2,
-        sender_name: "127.0.0.1"
-    },
-    {
-      message: "i am good , how are you",
-      senderID:1,
-        sender_name: "127.0.0.1"
-    },{
-      message:"helo",
-      senderID: 1,
-          sender_name: "127.0.0.1"
-    },
-    {
-      message : "How are you",
-      senderID: 2,
-        sender_name: "127.0.0.1"
-    },
-    {
-      message: "i am good , how are you",
-      senderID:1,
-        sender_name: "127.0.0.1"
-    },{
-      message:"helo",
-      senderID: 1,
-          sender_name: "127.0.0.1"
-    },
-    {
-      message : "How are you",
-      senderID: 2,
-        sender_name: "127.0.0.1"
-    },
-    {
-      message: "i am good , how are you",
-      senderID:1,
-        sender_name: "127.0.0.1"
-    },{
-      message:"helo",
-      senderID: 1,
-          sender_name: "127.0.0.1"
-    },
-    {
-      message : "How are you",
-      senderID: 2,
-        sender_name: "127.0.0.1"
-    },
-    {
-      message: "i am good , how are you",
-      senderID:1,
-        sender_name: "127.0.0.1"
-    },{
-      message:"helo",
-      senderID: 1,
-          sender_name: "127.0.0.1"
-    },
-    {
-      message : "How are you",
-      senderID: 2,
-        sender_name: "127.0.0.1"
-    },
-    {
-      message: "i am good , how are you",
-      senderID:1,
-        sender_name: "127.0.0.1"
-    },{
-      message:"helo",
-      senderID: 1,
-          sender_name: "127.0.0.1"
-    },
-    {
-      message : "How are you",
-      senderID: 2,
-        sender_name: "127.0.0.1"
-    },
-    {
-      message: "i am good , how are you",
-      senderID:1,
-        sender_name: "127.0.0.1"
-    },{
-      message:"helo",
-      senderID: 1,
-          sender_name: "127.0.0.1"
-    },
-    {
-      message : "How are you",
-      senderID: 2,
-        sender_name: "127.0.0.1"
-    },
-    {
-      message: "i am good , how are you",
-      senderID:1,
-        sender_name: "127.0.0.1"
-    },{
-      message:"helo",
-      senderID: 1,
-          sender_name: "127.0.0.1"
-    },
-    {
-      message : "How are you",
-      senderID: 2,
-        sender_name: "127.0.0.1"
-    },
-    {
-      message: "i am good , how are you",
-      senderID:1,
-        sender_name: "127.0.0.1"
-    },{
-      message:"helo",
-      senderID: 1,
-          sender_name: "127.0.0.1"
-    },
-    {
-      message : "How are you",
-      senderID: 2,
-        sender_name: "127.0.0.1"
-    },
-    {
-      message: "i am good , how are you",
-      senderID:1,
-        sender_name: "127.0.0.1"
-    },{
-      message:"helo",
-      senderID: 1,
-          sender_name: "127.0.0.1"
-    },
-    {
-      message : "How are you",
-      senderID: 2,
-        sender_name: "127.0.0.1"
-    },
-    {
-      message: "i am good , how are you",
-      senderID:1,
-        sender_name: "127.0.0.1"
-    },{
-      message:"helo",
-      senderID: 1,
-          sender_name: "127.0.0.1"
-    },
-    {
-      message : "How are you",
-      senderID: 2,
-        sender_name: "127.0.0.1"
-    },
-    {
-      message: "i am good , how are you",
-      senderID:1,
-        sender_name: "127.0.0.1"
-    },{
-      message:"helo",
-      senderID: 1,
-          sender_name: "127.0.0.1"
-    },
-    {
-      message : "How are you",
-      senderID: 2,
-        sender_name: "127.0.0.1"
-    },
-    {
-      message: "i am good , how are you",
-      senderID:1,
-        sender_name: "127.0.0.1"
-    },{
-      message:"helo",
-      senderID: 1,
-          sender_name: "127.0.0.1"
-    },
-    {
-      message : "How are you",
-      senderID: 2,
-        sender_name: "127.0.0.1"
-    },
-    {
-      message: "i am good , how are you",
-      senderID:1,
-        sender_name: "127.0.0.1"
-    },{
-      message:"helo",
-      senderID: 1,
-          sender_name: "127.0.0.1"
-    },
-    {
-      message : "How are you",
-      senderID: 2,
-        sender_name: "127.0.0.1"
-    },
-    {
-      message: "i am good , how are you",
-      senderID:1,
-        sender_name: "127.0.0.1"
-    },{
-      message:"helo",
-      senderID: 1,
-          sender_name: "127.0.0.1"
-    },
-    {
-      message : "How are you",
-      senderID: 2,
-        sender_name: "127.0.0.1"
-    },
-    {
-      message: "i am good , how are you",
-      senderID:1,
-        sender_name: "127.0.0.1"
-    },{
-      message:"helo",
-      senderID: 1,
-          sender_name: "127.0.0.1"
-    },
-    {
-      message : "How are you",
-      senderID: 2,
-        sender_name: "90.11.221.21"
-    },
-    {
-      message: "i am good , how are you",
-      senderID:1,
-        sender_name: "192.168.11.92"
-    },
-  ]
-  constructor() { }
+  constructor(private runner: RunnerService,
+              private msgService: MessageService
+  ) {
+  }
+
+  public setMessage(e: Event, r: any) {
+    // @ts-ignore
+    this.message = e.target.value
+  }
 
   ngOnInit(): void {
+    this.runner.ip.subscribe(
+      val => {
+        this.selfIP = val
+      }
+    )
+    this.runner.chat.subscribe(val => {
+      this.data = val;
+    })
   }
-  public sendData(){
+
+  ngAfterViewInit() {
+    this.runner.fetchIp();
+    this.runner.runner();
+  }
+  ngOnDestroy(){
+    this.runner.stopRunner()
+  }
+
+  public sendData() {
     let data = {
-        message : "who are you ",
-        senderID : 21,
-        sender_name : "KC"
+      message: this.message,
+      rid: localStorage.getItem('roomName')
     }
-    this.data.push(data);
-   this.scrollToBottom()
+    this.msgService.sendMessage(data)
+    this.scrollToBottom()
   }
-    scrollToBottom(): void {
-        try {
-            this.myScrollContainer.nativeElement.scrollTop = this.myScrollContainer.nativeElement.scrollHeight;
-        } catch(err) { }
+
+  scrollToBottom(): void {
+    try {
+      this.myScrollContainer.nativeElement.scrollTop = this.myScrollContainer.nativeElement.scrollHeight;
+    } catch (err) {
     }
+  }
 }

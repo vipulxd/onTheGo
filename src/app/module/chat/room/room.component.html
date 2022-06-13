@@ -5,16 +5,16 @@
     <div class="message-container" #scrollMe>
         <div class="message">
             <ng-container *ngFor="let item of data;">
-                <div class="senderName" [ngStyle]="item.senderID == selfID ? {'text-align':'right', 'color':'green'}:{'text-align':'left','color':'red'}">
-                    <p>{{item.sender_name}} :</p></div>
+                <div class="senderName" [ngStyle]="item.sender_ip == selfIP ? {'text-align':'right', 'color':'green'}:{'text-align':'left','color':'red'}">
+                    <p>{{item.sender_ip}} :</p></div>
                 <div class="text"
-                     [ngStyle]="{'text-align':item.senderID == selfID ? 'right':'left'}">{{item.message}}</div>
+                     [ngStyle]="{'text-align':item.sender_ip == selfIP ? 'right':'left'}">{{item.message}}</div>
             </ng-container>
         </div>
     </div>
     <div class="input-container">
-        <div class="input-wrapper"><input class="input text-left"></div>
-        <div class="icon cpt" (click)="sendData()">SEND</div>
+        <div class="input-wrapper"><input class="input text-left" #inpRef (keyup)="setMessage($event , inpRef)"></div>
+        <div class="icon cpt" (click)="sendData();inpRef.value = ''">SEND</div>
     </div>
 
 </div>
