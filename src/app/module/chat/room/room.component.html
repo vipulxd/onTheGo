@@ -3,6 +3,7 @@
   <div class="message-container">
     <div class="message">
       <ng-container *ngFor="let item of data;">
+          <div class="senderName" [ngStyle]="{'text-align':item.senderID == selfID ? 'right':'left'}"><p>{{item.sender_name}} :</p></div>
         <div class="text" [ngStyle]="{'text-align':item.senderID == selfID ? 'right':'left'}">{{item.message}}</div>
       </ng-container>
     </div>

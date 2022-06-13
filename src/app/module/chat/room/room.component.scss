@@ -1,7 +1,7 @@
 .container {
   height:100%;
   display : grid;
-  grid-template-rows :5% 90% 5%;
+  grid-template-rows : 4% 88% 7%;
   grid-row-gap: 10px;
   overflow: hidden;
 
@@ -10,7 +10,9 @@
   margin: 20px 0px;
   align-items: end;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  padding: 0px 19px;
+
   .icon {
     align-items: start;
   }
@@ -19,6 +21,8 @@
   width:100%;
 }
 .message-container{
+  border: 1px solid;
+  border-radius: 5px;
   margin:0px 20px;
   overflow-y: scroll;
   scrollbar-width: none; /* Firefox */
@@ -28,4 +32,14 @@
 .text-left {
   text-align: start;
 }
-
+.message {
+  padding : 0px 10px;
+  font-size: large;
+}
+.exit-container{
+  font-size: xx-large;
+  padding: 10px 19px;
+}
+.senderName {
+   font-size: small;
+}

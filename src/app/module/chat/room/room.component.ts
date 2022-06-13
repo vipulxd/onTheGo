@@ -10,180 +10,228 @@ public selfID = 1
   public data = [
     {
       message:"helo",
-      senderID: 1
+      senderID: 1,
+        sender_name: "vipul"
     },
     {
       message : "How are you",
-      senderID: 2
+      senderID: 2,
+        sender_name: "vipul"
     },
     {
       message: "i am good , how are you",
-      senderID:1
+      senderID:1,
+        sender_name: "vipul"
     },{
       message:"helo",
-      senderID: 1
+      senderID: 1,
+          sender_name: "vipul"
     },
     {
       message : "How are you",
-      senderID: 2
+      senderID: 2,
+        sender_name: "vipul"
     },
     {
       message: "i am good , how are you",
-      senderID:1
+      senderID:1,
+        sender_name: "vipul"
     },{
       message:"helo",
-      senderID: 1
+      senderID: 1,
+          sender_name: "vipul"
     },
     {
       message : "How are you",
-      senderID: 2
+      senderID: 2,
+        sender_name: "vipul"
     },
     {
       message: "i am good , how are you",
-      senderID:1
+      senderID:1,
+        sender_name: "vipul"
     },{
       message:"helo",
-      senderID: 1
+      senderID: 1,
+          sender_name: "vipul"
     },
     {
       message : "How are you",
-      senderID: 2
+      senderID: 2,
+        sender_name: "vipul"
     },
     {
       message: "i am good , how are you",
-      senderID:1
+      senderID:1,
+        sender_name: "vipul"
     },{
       message:"helo",
-      senderID: 1
+      senderID: 1,
+          sender_name: "vipul"
     },
     {
       message : "How are you",
-      senderID: 2
+      senderID: 2,
+        sender_name: "vipul"
     },
     {
       message: "i am good , how are you",
-      senderID:1
+      senderID:1,
+        sender_name: "vipul"
     },{
       message:"helo",
-      senderID: 1
+      senderID: 1,
+          sender_name: "vipul"
     },
     {
       message : "How are you",
-      senderID: 2
+      senderID: 2,
+        sender_name: "vipul"
     },
     {
       message: "i am good , how are you",
-      senderID:1
+      senderID:1,
+        sender_name: "vipul"
     },{
       message:"helo",
-      senderID: 1
+      senderID: 1,
+          sender_name: "vipul"
     },
     {
       message : "How are you",
-      senderID: 2
+      senderID: 2,
+        sender_name: "vipul"
     },
     {
       message: "i am good , how are you",
-      senderID:1
+      senderID:1,
+        sender_name: "vipul"
     },{
       message:"helo",
-      senderID: 1
+      senderID: 1,
+          sender_name: "vipul"
     },
     {
       message : "How are you",
-      senderID: 2
+      senderID: 2,
+        sender_name: "vipul"
     },
     {
       message: "i am good , how are you",
-      senderID:1
+      senderID:1,
+        sender_name: "vipul"
     },{
       message:"helo",
-      senderID: 1
+      senderID: 1,
+          sender_name: "vipul"
     },
     {
       message : "How are you",
-      senderID: 2
+      senderID: 2,
+        sender_name: "vipul"
     },
     {
       message: "i am good , how are you",
-      senderID:1
+      senderID:1,
+        sender_name: "vipul"
     },{
       message:"helo",
-      senderID: 1
+      senderID: 1,
+          sender_name: "vipul"
     },
     {
       message : "How are you",
-      senderID: 2
+      senderID: 2,
+        sender_name: "vipul"
     },
     {
       message: "i am good , how are you",
-      senderID:1
+      senderID:1,
+        sender_name: "vipul"
     },{
       message:"helo",
-      senderID: 1
+      senderID: 1,
+          sender_name: "vipul"
     },
     {
       message : "How are you",
-      senderID: 2
+      senderID: 2,
+        sender_name: "vipul"
     },
     {
       message: "i am good , how are you",
-      senderID:1
+      senderID:1,
+        sender_name: "vipul"
     },{
       message:"helo",
-      senderID: 1
+      senderID: 1,
+          sender_name: "vipul"
     },
     {
       message : "How are you",
-      senderID: 2
+      senderID: 2,
+        sender_name: "vipul"
     },
     {
       message: "i am good , how are you",
-      senderID:1
+      senderID:1,
+        sender_name: "vipul"
     },{
       message:"helo",
-      senderID: 1
+      senderID: 1,
+          sender_name: "vipul"
     },
     {
       message : "How are you",
-      senderID: 2
+      senderID: 2,
+        sender_name: "vipul"
     },
     {
       message: "i am good , how are you",
-      senderID:1
+      senderID:1,
+        sender_name: "vipul"
     },{
       message:"helo",
-      senderID: 1
+      senderID: 1,
+          sender_name: "vipul"
     },
     {
       message : "How are you",
-      senderID: 2
+      senderID: 2,
+        sender_name: "vipul"
     },
     {
       message: "i am good , how are you",
-      senderID:1
+      senderID:1,
+        sender_name: "vipul"
     },{
       message:"helo",
-      senderID: 1
+      senderID: 1,
+          sender_name: "vipul"
     },
     {
       message : "How are you",
-      senderID: 2
+      senderID: 2,
+        sender_name: "vipul"
     },
     {
       message: "i am good , how are you",
-      senderID:1
+      senderID:1,
+        sender_name: "vipul"
     },{
       message:"helo",
-      senderID: 1
+      senderID: 1,
+          sender_name: "vipul"
     },
     {
       message : "How are you",
-      senderID: 2
+      senderID: 2,
+        sender_name: "vipul"
     },
     {
       message: "i am good , how are you",
-      senderID:1
+      senderID:1,
+        sender_name: "vipul"
     },
   ]
   constructor() { }

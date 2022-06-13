@@ -53,6 +53,7 @@ h1{
   color:#30cb1e;
   font-size:xx-large;
   text-align : center;
+  outline : none !important;
 :focus{
   outline : none;
 }
@@ -63,4 +64,12 @@ a{
 }
 .cpt {
   cursor :pointer;
+}
+::-webkit-scrollbar {
+  width: 0;  /* Remove scrollbar space */
+  background: transparent;  /* Optional: just make scrollbar invisible */
+}
+/* Optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+  background: #FF0000;
 }
