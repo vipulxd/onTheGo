@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-room',
@@ -7,7 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RoomComponent implements OnInit {
 public selfID = 1
-  public data = [
+    // @ts-ignore
+    @ViewChild('scrollMe') private myScrollContainer: ElementRef;
+
+    public data = [
     {
       message:"helo",
       senderID: 1,
@@ -238,5 +241,18 @@ public selfID = 1
 
   ngOnInit(): void {
   }
-
+  public sendData(){
+    let data = {
+        message : "who are you ",
+        senderID : 21,
+        sender_name : "KC"
+    }
+    this.data.push(data);
+   this.scrollToBottom()
+  }
+    scrollToBottom(): void {
+        try {
+            this.myScrollContainer.nativeElement.scrollTop = this.myScrollContainer.nativeElement.scrollHeight;
+        } catch(err) { }
+    }
 }
