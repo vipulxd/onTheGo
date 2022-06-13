@@ -25,7 +25,7 @@
 
   border: 1px solid;
   border-radius: 5px;
-  margin:0px 20px;
+  margin:0px 31px;
   overflow-y: scroll;
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none;  /* Internet Explorer 10+ */
@@ -33,15 +33,21 @@
 
 .text-left {
   text-align: start;
+  width:90%;
+  margin-left:10px;
 }
 .message {
   padding : 0px 10px;
   font-size: large;
 }
 .exit-container{
-  font-size: xx-large;
+  font-size: large;
   padding: 10px 19px;
 }
 .senderName {
-   font-size: small;
+  font-size: small;
+
+  p {
+    margin-bottom: 1px !important;
+  }
 }
