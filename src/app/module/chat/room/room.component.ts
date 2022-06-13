@@ -7,6 +7,7 @@ import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 })
 export class RoomComponent implements OnInit {
 public selfID = 1
+    public selfIP = '127.0.0.1'
     // @ts-ignore
     @ViewChild('scrollMe') private myScrollContainer: ElementRef;
 
@@ -14,227 +15,227 @@ public selfID = 1
     {
       message:"helo",
       senderID: 1,
-        sender_name: "vipul"
+        sender_name: "127.0.0.1"
     },
     {
       message : "How are you",
       senderID: 2,
-        sender_name: "vipul"
+        sender_name: "127.0.0.1"
     },
     {
       message: "i am good , how are you",
       senderID:1,
-        sender_name: "vipul"
+        sender_name: "127.0.0.1"
     },{
       message:"helo",
       senderID: 1,
-          sender_name: "vipul"
+          sender_name: "127.0.0.1"
     },
     {
       message : "How are you",
       senderID: 2,
-        sender_name: "vipul"
+        sender_name: "127.0.0.1"
     },
     {
       message: "i am good , how are you",
       senderID:1,
-        sender_name: "vipul"
+        sender_name: "127.0.0.1"
     },{
       message:"helo",
       senderID: 1,
-          sender_name: "vipul"
+          sender_name: "127.0.0.1"
     },
     {
       message : "How are you",
       senderID: 2,
-        sender_name: "vipul"
+        sender_name: "127.0.0.1"
     },
     {
       message: "i am good , how are you",
       senderID:1,
-        sender_name: "vipul"
+        sender_name: "127.0.0.1"
     },{
       message:"helo",
       senderID: 1,
-          sender_name: "vipul"
+          sender_name: "127.0.0.1"
     },
     {
       message : "How are you",
       senderID: 2,
-        sender_name: "vipul"
+        sender_name: "127.0.0.1"
     },
     {
       message: "i am good , how are you",
       senderID:1,
-        sender_name: "vipul"
+        sender_name: "127.0.0.1"
     },{
       message:"helo",
       senderID: 1,
-          sender_name: "vipul"
+          sender_name: "127.0.0.1"
     },
     {
       message : "How are you",
       senderID: 2,
-        sender_name: "vipul"
+        sender_name: "127.0.0.1"
     },
     {
       message: "i am good , how are you",
       senderID:1,
-        sender_name: "vipul"
+        sender_name: "127.0.0.1"
     },{
       message:"helo",
       senderID: 1,
-          sender_name: "vipul"
+          sender_name: "127.0.0.1"
     },
     {
       message : "How are you",
       senderID: 2,
-        sender_name: "vipul"
+        sender_name: "127.0.0.1"
     },
     {
       message: "i am good , how are you",
       senderID:1,
-        sender_name: "vipul"
+        sender_name: "127.0.0.1"
     },{
       message:"helo",
       senderID: 1,
-          sender_name: "vipul"
+          sender_name: "127.0.0.1"
     },
     {
       message : "How are you",
       senderID: 2,
-        sender_name: "vipul"
+        sender_name: "127.0.0.1"
     },
     {
       message: "i am good , how are you",
       senderID:1,
-        sender_name: "vipul"
+        sender_name: "127.0.0.1"
     },{
       message:"helo",
       senderID: 1,
-          sender_name: "vipul"
+          sender_name: "127.0.0.1"
     },
     {
       message : "How are you",
       senderID: 2,
-        sender_name: "vipul"
+        sender_name: "127.0.0.1"
     },
     {
       message: "i am good , how are you",
       senderID:1,
-        sender_name: "vipul"
+        sender_name: "127.0.0.1"
     },{
       message:"helo",
       senderID: 1,
-          sender_name: "vipul"
+          sender_name: "127.0.0.1"
     },
     {
       message : "How are you",
       senderID: 2,
-        sender_name: "vipul"
+        sender_name: "127.0.0.1"
     },
     {
       message: "i am good , how are you",
       senderID:1,
-        sender_name: "vipul"
+        sender_name: "127.0.0.1"
     },{
       message:"helo",
       senderID: 1,
-          sender_name: "vipul"
+          sender_name: "127.0.0.1"
     },
     {
       message : "How are you",
       senderID: 2,
-        sender_name: "vipul"
+        sender_name: "127.0.0.1"
     },
     {
       message: "i am good , how are you",
       senderID:1,
-        sender_name: "vipul"
+        sender_name: "127.0.0.1"
     },{
       message:"helo",
       senderID: 1,
-          sender_name: "vipul"
+          sender_name: "127.0.0.1"
     },
     {
       message : "How are you",
       senderID: 2,
-        sender_name: "vipul"
+        sender_name: "127.0.0.1"
     },
     {
       message: "i am good , how are you",
       senderID:1,
-        sender_name: "vipul"
+        sender_name: "127.0.0.1"
     },{
       message:"helo",
       senderID: 1,
-          sender_name: "vipul"
+          sender_name: "127.0.0.1"
     },
     {
       message : "How are you",
       senderID: 2,
-        sender_name: "vipul"
+        sender_name: "127.0.0.1"
     },
     {
       message: "i am good , how are you",
       senderID:1,
-        sender_name: "vipul"
+        sender_name: "127.0.0.1"
     },{
       message:"helo",
       senderID: 1,
-          sender_name: "vipul"
+          sender_name: "127.0.0.1"
     },
     {
       message : "How are you",
       senderID: 2,
-        sender_name: "vipul"
+        sender_name: "127.0.0.1"
     },
     {
       message: "i am good , how are you",
       senderID:1,
-        sender_name: "vipul"
+        sender_name: "127.0.0.1"
     },{
       message:"helo",
       senderID: 1,
-          sender_name: "vipul"
+          sender_name: "127.0.0.1"
     },
     {
       message : "How are you",
       senderID: 2,
-        sender_name: "vipul"
+        sender_name: "127.0.0.1"
     },
     {
       message: "i am good , how are you",
       senderID:1,
-        sender_name: "vipul"
+        sender_name: "127.0.0.1"
     },{
       message:"helo",
       senderID: 1,
-          sender_name: "vipul"
+          sender_name: "127.0.0.1"
     },
     {
       message : "How are you",
       senderID: 2,
-        sender_name: "vipul"
+        sender_name: "127.0.0.1"
     },
     {
       message: "i am good , how are you",
       senderID:1,
-        sender_name: "vipul"
+        sender_name: "127.0.0.1"
     },{
       message:"helo",
       senderID: 1,
-          sender_name: "vipul"
+          sender_name: "127.0.0.1"
     },
     {
       message : "How are you",
       senderID: 2,
-        sender_name: "vipul"
+        sender_name: "90.11.221.21"
     },
     {
       message: "i am good , how are you",
       senderID:1,
-        sender_name: "vipul"
+        sender_name: "192.168.11.92"
     },
   ]
   constructor() { }

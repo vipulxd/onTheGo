@@ -25,3 +25,12 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## Build for Android  :
+1. npm install @capacitor/core  
+2. npm install @capacitor/cli --save-dev
+3. npx cap init     
+4. Change build config in angular.json  , change build directory to "www"
+5. ng build
+6. npx cap add android     
+7. npx cap open android ( Open the projecy in AndroidStudio )      

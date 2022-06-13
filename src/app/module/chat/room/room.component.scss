@@ -7,8 +7,7 @@
 
 }
 .input-container{
-  margin: 20px 0px;
-  align-items: end;
+  align-items: flex-start;
   display: flex;
   justify-content: space-evenly;
   padding: 0px 19px;
@@ -43,6 +42,21 @@
 .exit-container{
   font-size: large;
   padding: 10px 19px;
+  display: flex;
+  justify-content: space-between;
+}
+.IP-container {
+  color : green;
+  border: 1px solid;
+height:2.5vh;
+  p{
+    align-self: center;
+    align-items: center;
+  }
+  margin-right:10px;
+  width:30vw;
+  text-align: center;
+  border-radius: 4px;
 }
 .senderName {
   font-size: small;

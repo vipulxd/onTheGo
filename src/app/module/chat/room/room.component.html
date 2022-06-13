@@ -1,5 +1,7 @@
 <div class="container">
-    <div class="exit-container cpt"><a [routerLink]="['/chat/hall']"> <- Exit</a></div>
+    <div class="exit-container cpt"><div><a [routerLink]="['/chat/hall']"> <- Exit</a></div>
+        <div class="IP-container"><p>{{selfIP}}</p></div>
+    </div>
     <div class="message-container" #scrollMe>
         <div class="message">
             <ng-container *ngFor="let item of data;">
