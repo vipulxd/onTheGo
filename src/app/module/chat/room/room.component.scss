@@ -1,16 +1,17 @@
 .container {
   height:100%;
   display : grid;
-  grid-template-rows :5% 90% 5%;
+  grid-template-rows : 4% 88% 7%;
   grid-row-gap: 10px;
   overflow: hidden;
 
 }
 .input-container{
-  margin: 20px 0px;
-  align-items: end;
+  align-items: flex-start;
   display: flex;
   justify-content: space-evenly;
+  padding: 0px 19px;
+
   .icon {
     align-items: start;
   }
@@ -18,8 +19,12 @@
 .text {
   width:100%;
 }
+
 .message-container{
-  margin:0px 20px;
+
+  border: 1px solid;
+  border-radius: 5px;
+  margin:0px 31px;
   overflow-y: scroll;
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none;  /* Internet Explorer 10+ */
@@ -27,5 +32,36 @@
 
 .text-left {
   text-align: start;
+  width:90%;
+  margin-left:10px;
 }
+.message {
+  padding : 0px 10px;
+  font-size: large;
+}
+.exit-container{
+  font-size: large;
+  padding: 10px 19px;
+  display: flex;
+  justify-content: space-between;
+}
+.IP-container {
+  color : green;
+  border: 1px solid;
+height:2.5vh;
+  p{
+    align-self: center;
+    align-items: center;
+  }
+  margin-right:10px;
+  width:30vw;
+  text-align: center;
+  border-radius: 4px;
+}
+.senderName {
+  font-size: small;
 
+  p {
+    margin-bottom: 1px !important;
+  }
+}

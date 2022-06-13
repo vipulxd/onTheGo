@@ -25,3 +25,22 @@
     outline:none !important;
   }
 }
+.warning {
+  font-size: small;
+  text-align: left;
+  line-height: 1;
+  color :red;
+  margin: 0px 22px;
+
+}
+.border-green{
+  display: flex;
+  flex-direction: column;
+  height: 13vh;
+  justify-content: space-around;
+}
+.custom-input {
+  width: 90%;
+  align-self: center;
+font-size: large;
+}

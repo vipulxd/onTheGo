@@ -1,15 +1,20 @@
 <div class="container">
-<div class="exit-container cpt"><a [routerLink]="['/chat/hall']"> <- Exit</a></div>
-  <div class="message-container">
-    <div class="message">
-      <ng-container *ngFor="let item of data;">
-        <div class="text" [ngStyle]="{'text-align':item.senderID == selfID ? 'right':'left'}">{{item.message}}</div>
-      </ng-container>
+    <div class="exit-container cpt"><div><a [routerLink]="['/chat/hall']"> <- Exit</a></div>
+        <div class="IP-container"><p>{{selfIP}}</p></div>
     </div>
-  </div>
-  <div class="input-container">
-    <div class="input-wrapper"><input class="input text-left"></div>
-    <div class="icon cpt">SEND</div>
-  </div>
+    <div class="message-container" #scrollMe>
+        <div class="message">
+            <ng-container *ngFor="let item of data;">
+                <div class="senderName" [ngStyle]="item.senderID == selfID ? {'text-align':'right', 'color':'green'}:{'text-align':'left','color':'red'}">
+                    <p>{{item.sender_name}} :</p></div>
+                <div class="text"
+                     [ngStyle]="{'text-align':item.senderID == selfID ? 'right':'left'}">{{item.message}}</div>
+            </ng-container>
+        </div>
+    </div>
+    <div class="input-container">
+        <div class="input-wrapper"><input class="input text-left"></div>
+        <div class="icon cpt" (click)="sendData()">SEND</div>
+    </div>
 
 </div>
