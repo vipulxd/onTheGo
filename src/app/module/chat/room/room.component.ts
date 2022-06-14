@@ -41,6 +41,7 @@ export class RoomComponent implements OnInit, AfterViewInit , OnDestroy {
     this.runner.runner();
   }
   ngOnDestroy(){
+      console.log('destroying')
     this.runner.stopRunner()
   }
 

@@ -15,11 +15,12 @@ export class MessageService {
   ) { }
 public checkRoom(val : string) {
  let rname = val
-    this.http.get(`http://localhost:9090/hall/room/${rname}`).subscribe(
+    this.http.get(`http://13.126.239.171:9090/hall/room/${rname}`).subscribe(
       (s)=>{
+          console.log(s)
         if(s){
           // @ts-ignore
-          this.runner.roomName = s.id;
+          this.runner.roomName.emit(s.id);
           // @ts-ignore
           localStorage.setItem('roomName',s.id)
           // @ts-ignore
@@ -42,14 +43,14 @@ public createRoom(val: string){
     let rname = val;
     let data = {"name":rname}
   JSON.stringify(data);
-    this.http.post('http://localhost:9090/hall/room',data).subscribe(
+    this.http.post('http://13.126.239.171:9090/hall/room',data).subscribe(
       (v)=>{
        // @ts-ignore
         if(v.name){
           this.runner.runner()
          this.router.navigate(['/chat/room']);
          // @ts-ignore
-          this.runner.roomName = v.id;
+          this.runner.roomName.emit(v.id);
           // @ts-ignore
           localStorage.setItem('roomName',v.id)
        }
@@ -60,7 +61,7 @@ public createRoom(val: string){
     )
 }
 public sendMessage(d : any){
-    this.http.post('http://localhost:9090/chat/message',d).subscribe(
+    this.http.post('http://13.126.239.171:9090/chat/message',d).subscribe(
       val =>{
         console.log(val)
       },
