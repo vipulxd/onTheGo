@@ -9,6 +9,7 @@ import {interval} from 'rxjs';
 })
 export class RunnerService {
     roomName: EventEmitter<string> = new EventEmitter<string>();
+    private serverUrl = 'https://onthegobackend.herokuapp.com'
     private intervalSubs: Subscription = null
     ip: EventEmitter<string> = new EventEmitter<string>();
     public chat: Subject<any> = new Subject<any>();
@@ -32,7 +33,7 @@ export class RunnerService {
     public runnerRequest() {
         let rname = localStorage.getItem('roomName')
         if (rname) {
-            this.http.get(`http://13.126.239.171:9090/chat/room/${rname}`).subscribe(
+            this.http.get(`${this.serverUrl}/chat/room/${rname}`).subscribe(
                 (d) => {
                     this.chat.next(d);
                     console.log(d)
@@ -54,7 +55,7 @@ export class RunnerService {
     }
 
     public fetchIp() {
-        this.http.get('http://13.126.239.171:9090/getloc').subscribe(
+        this.http.get(`${this.serverUrl}/getloc`).subscribe(
             (val) => {
                 // @ts-ignore
                 this.ip.emit(val.ip)

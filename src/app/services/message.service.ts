@@ -8,6 +8,7 @@ import { RunnerService } from './runner.service';
 })
 export class MessageService {
  public rname : string ='' ;
+ private serverUrl = 'https://onthegobackend.herokuapp.com'
  public warningString : EventEmitter<string> = new EventEmitter<string>();
   constructor(private http : HttpClient,
               private router : Router,
@@ -15,7 +16,7 @@ export class MessageService {
   ) { }
 public checkRoom(val : string) {
  let rname = val
-    this.http.get(`http://13.126.239.171:9090/hall/room/${rname}`).subscribe(
+    this.http.get(`${this.serverUrl}/hall/room/${rname}`).subscribe(
       (s)=>{
           console.log(s)
         if(s){
@@ -43,7 +44,7 @@ public createRoom(val: string){
     let rname = val;
     let data = {"name":rname}
   JSON.stringify(data);
-    this.http.post('http://13.126.239.171:9090/hall/room',data).subscribe(
+    this.http.post(`${this.serverUrl}/hall/room`,data).subscribe(
       (v)=>{
        // @ts-ignore
         if(v.name){
@@ -61,7 +62,7 @@ public createRoom(val: string){
     )
 }
 public sendMessage(d : any){
-    this.http.post('http://13.126.239.171:9090/chat/message',d).subscribe(
+    this.http.post(`${this.serverUrl}/chat/message`,d).subscribe(
       val =>{
         console.log(val)
       },
