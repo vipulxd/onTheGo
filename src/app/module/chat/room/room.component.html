@@ -13,7 +13,7 @@
         </div>
     </div>
     <div class="input-container ">
-        <div class="input-wrapper"><input class="input text-left card-style" (keyup.enter)="sendData();inpRef.value= ''" #inpRef (keyup)="setMessage($event , inpRef)"></div>
+        <div class="input-wrapper"><input class="input text-left card-style" placeholder="type something" (keyup.enter)="sendData();inpRef.value= ''" #inpRef (keyup)="setMessage($event , inpRef)"></div>
         <div class="icon cpt"  ><button (click)="sendData();inpRef.value = ''"  class="button btn-send card-style">SEND</button></div>
     </div>
 
