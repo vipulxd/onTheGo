@@ -1,7 +1,7 @@
 .container {
   height:100%;
   display : grid;
-  grid-template-rows : 5% 83% 5%;
+  grid-template-rows : 9% 73% 13%;
   grid-row-gap: 6px;
   overflow: hidden;
 color: darkslategrey;
@@ -11,7 +11,7 @@ color: darkslategrey;
   align-items: flex-start;
   display: flex;
   justify-content: space-evenly;
-  padding: 0px 19px;
+  padding: 0px 1px;
 
   .icon {
     align-items: start;
@@ -24,11 +24,15 @@ color: darkslategrey;
 
 .message-container{
   border-radius: 50px;
+  border-bottom-right-radius: 4px !important;
+  border-top-left-radius: 4px !important;
   background: #e0e0e0;
   box-shadow:  26px 26px 52px #9d9d9d,
   -26px -26px 52px #ffffff;
   border-radius: 5px;
-  margin:0px 31px;
+  margin:1px 1px;
+  //padding:0px 4px;
+  height:100%;
   overflow-y: scroll;
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none;  /* Internet Explorer 10+ */
@@ -46,29 +50,24 @@ margin:10px;
 }
 .exit-container{
   font-size: large;
-  padding: 10px 19px;
+  padding: 10px 0px;
   display: flex;
   justify-content: space-between;
   .ext-button {
     button{
       width:100%;
-      color: green;
+   color : darkslategrey !important;
       margin-left:12px;
     }
   }
 }
 .IP-container {
-  color : green;
-
-height:3.0vh;
-  border-radius: 50px;
-  background: #e0e0e0;
-  box-shadow:  26px 26px 52px #9d9d9d,
-  -26px -26px 52px #ffffff;
+height:30%;
   p{
     align-self: center;
     align-items: center;
   }
+  margin-top:5px;
   margin-right:10px;
   width:60%;
   text-align: center;

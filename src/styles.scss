@@ -2,15 +2,15 @@
 
 html, body { height: 100%;  }
 body { margin: 0;
-background-color: #ffffff !important;
+background-color: #79e0a3 !important;
 }
 
 @font-face {
   font-family  : 'dos';
-  src: url('assets/dos.ttf') format('truetype');
+  src: url('assets/Satisfy-Regular.ttf') format('truetype');
 }
 * {
-  font-family : 'dos' !important ;
+  font-family : 'dos' !important; ;
 }
 .color-dark{
   background-color: #181d2a !important;
@@ -38,17 +38,17 @@ h1{
   color: darkslategrey !important;
 
   border: none;
-  border-radius: 4px;
-  height:3vh;
+  border-radius: 2px;
+  height:30px;
   width:20vw;
   font-size:large;
 .btn-send{
   width:100% !important;
 }
-  background-color: white;
-  background: #e0e0e0;
-  box-shadow:  26px 26px 52px #9d9d9d,
-  -26px -26px 52px #ffffff;
+
+  background: #79e0a3 !important;
+  box-shadow:  20px 20px 60px #67be8b,
+  -20px -20px 60px #8bffbb !important;
 
 
 }
@@ -86,8 +86,8 @@ a{
   background: #FF0000;
 }
 .card-style {
-  border-radius: 20px !important;
-  background: linear-gradient(315deg, #ffffff, #e6e6e6) !important;
-  box-shadow:  -26px -26px 52px #b3b3b3,
-  26px 26px 52px #ffffff !important;
+  border-radius: 40px !important;
+  background: #79e0a3 !important;
+  box-shadow:  20px 20px 60px #67be8b,
+  -20px -20px 60px #8bffbb !important;
 }

@@ -9,11 +9,13 @@ import { MessageService } from 'src/app/services/message.service';
 export class HallComponent implements OnInit {
  public rname : string = '';
  warnString : string ='';
+ public isLoading : boolean = false;
   constructor( private messageService : MessageService) { }
 
   ngOnInit(): void {
     localStorage.clear()
    this.messageService.warningString.subscribe(val=>{
+     this.isLoading = false;
      this.warnString = val;
    })
   }
@@ -23,10 +25,16 @@ export class HallComponent implements OnInit {
      this.rname = e.target.value;
    }
  }
- public checkRoom(){
-    this.messageService.checkRoom(this.rname)
+ public checkRoom() {
+   this.isLoading = true
+   if (this.rname.length > 1) {
+     this.messageService.checkRoom(this.rname)
+   }
  }
-public createRoom(){
+public createRoom() {
+  this.isLoading = true
+  if (this.rname.length > 1) {
     this.messageService.createRoom(this.rname)
+  }
 }
 }
