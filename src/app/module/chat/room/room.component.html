@@ -1,8 +1,8 @@
-<div class="container">
-    <div class="exit-container cpt"><div><a [routerLink]="['/chat/hall']"> <- Exit</a></div>
-        <div class="IP-container"><p>{{selfIP}}</p></div>
+<div class="container card-style">
+    <div class="exit-container cpt"><div class="ext-button "><a [routerLink]="['/chat/hall']"><button class="button card-style " ><- Exit</button></a></div>
+        <div class="IP-container card-style"><p>{{selfIP}}</p></div>
     </div>
-    <div class="message-container" #scrollMe>
+    <div class="message-container card-style" #scrollMe>
         <div class="message">
             <ng-container *ngFor="let item of data;">
                 <div class="senderName" [ngStyle]="item.sender_ip == selfIP ? {'text-align':'right', 'color':'green'}:{'text-align':'left','color':'red'}">
@@ -13,8 +13,8 @@
         </div>
     </div>
     <div class="input-container">
-        <div class="input-wrapper"><input class="input text-left" #inpRef (keyup)="setMessage($event , inpRef)"></div>
-        <div class="icon cpt" (click)="sendData();inpRef.value = ''">SEND</div>
+        <div class="input-wrapper"><input class="input text-left card-style" #inpRef (keyup)="setMessage($event , inpRef)"></div>
+        <div class="icon cpt" (click)="sendData();inpRef.value = ''"><button class="button btn-send card-style">SEND</button></div>
     </div>
 
 </div>

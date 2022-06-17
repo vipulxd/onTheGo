@@ -3,6 +3,7 @@
   width: 100vw;
   display: flex;
   justify-content: space-around;
+  border-radius: 50px;
 
   .wrapper {
     justify-self: center;
@@ -10,10 +11,14 @@
     text-align: center;
     font-size: 8vw;
     line-height: 3;
+    height:30vh;
+    padding:20px 0px;
     .name{
       font-size: 12vw;
     }
+
   }
+
 }
 .btn-wrapper{
   margin:10px 0px;
@@ -29,7 +34,7 @@
   font-size: small;
   text-align: left;
   line-height: 1;
-  color :red;
+  color: darkslategrey !important;
   margin: 0px 22px;
 
 }

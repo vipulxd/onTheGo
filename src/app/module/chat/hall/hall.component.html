@@ -1,15 +1,15 @@
 <div class="container">
-  <div class="wrapper">
+  <div class="wrapper card-style">
     <h1 class="text-large cpt"><a [routerLink]="['/']">onTheGo</a></h1>
     <div class="border-green">
         <div class="warning">If you dont like strangers then make sure your address is unique .</div>
 
-        <input class="input custom-input" (keyup)="roomName($event)" placeholder="type your address">
+        <input class="input custom-input card-style" (keyup)="roomName($event)" placeholder="type your address">
     <div class="warning">{{warnString}}</div>
     </div>
     <div class="btn-wrapper">
-      <button class="button" (click)="createRoom()">CREATE</button>
-      <button class="button"  (click)="checkRoom()" >JOIN
+      <button class="button card-style" (click)="createRoom()">CREATE</button>
+      <button class="button card-style"  (click)="checkRoom()" >JOIN
       </button>
     </div>
   </div>

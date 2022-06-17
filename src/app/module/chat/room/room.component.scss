@@ -1,10 +1,11 @@
 .container {
   height:100%;
   display : grid;
-  grid-template-rows : 4% 88% 7%;
-  grid-row-gap: 10px;
+  grid-template-rows : 5% 88% 5%;
+  grid-row-gap: 6px;
   overflow: hidden;
-
+color: darkslategrey;
+  border-radius: 50px;
 }
 .input-container{
   align-items: flex-start;
@@ -14,6 +15,7 @@
 
   .icon {
     align-items: start;
+    margin:10px;
   }
 }
 .text {
@@ -21,8 +23,10 @@
 }
 
 .message-container{
-
-  border: 1px solid;
+  border-radius: 50px;
+  background: #e0e0e0;
+  box-shadow:  26px 26px 52px #9d9d9d,
+  -26px -26px 52px #ffffff;
   border-radius: 5px;
   margin:0px 31px;
   overflow-y: scroll;
@@ -33,7 +37,7 @@
 .text-left {
   text-align: start;
   width:90%;
-  margin-left:10px;
+margin:10px;
   font-size: large;
 }
 .message {
@@ -45,11 +49,22 @@
   padding: 10px 19px;
   display: flex;
   justify-content: space-between;
+  .ext-button {
+    button{
+      width:100%;
+      color: green;
+      margin-left:12px;
+    }
+  }
 }
 .IP-container {
   color : green;
-  border: 1px solid;
-height:2.5vh;
+
+height:3.0vh;
+  border-radius: 50px;
+  background: #e0e0e0;
+  box-shadow:  26px 26px 52px #9d9d9d,
+  -26px -26px 52px #ffffff;
   p{
     align-self: center;
     align-items: center;
@@ -67,5 +82,5 @@ height:2.5vh;
   }
 }
 .input-wrapper{
-  width:90%;
+  width:80%;
 }
