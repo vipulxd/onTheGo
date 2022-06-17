@@ -32,5 +32,6 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 3. npx cap init     
 4. Change build config in angular.json  , change build directory to "www"
 5. ng build
-6. npx cap add android     
-7. npx cap open android ( Open the project in AndroidStudio )      
+6. npx cap add android    
+7. if already build android use : npx cap sync
+8. npx cap open android ( Open the project in AndroidStudio )      
