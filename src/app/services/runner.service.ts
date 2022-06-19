@@ -3,13 +3,14 @@ import {HttpClient} from '@angular/common/http'
 import {Router} from '@angular/router';
 import {BehaviorSubject, Subject, Subscription} from 'rxjs';
 import {interval} from 'rxjs';
+import { environment } from 'src/environments/environment.prod';
 
 @Injectable({
     providedIn: 'root'
 })
 export class RunnerService {
     roomName: EventEmitter<string> = new EventEmitter<string>();
-    private serverUrl = 'https://onthegobackend.herokuapp.com'
+    private serverUrl = environment.backendUrl
     private intervalSubs: Subscription = null
     ip: EventEmitter<string> = new EventEmitter<string>();
     public chat: Subject<any> = new Subject<any>();
@@ -36,7 +37,6 @@ export class RunnerService {
             this.http.get(`${this.serverUrl}/chat/room/${rname}`).subscribe(
                 (d) => {
                     this.chat.next(d);
-                    console.log(d)
                 },
                 (e) => {
                     this.router.navigate([

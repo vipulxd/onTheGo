@@ -9,7 +9,7 @@ import {RunnerService} from 'src/app/services/runner.service';
 })
 export class RoomComponent implements OnInit, AfterViewInit , OnDestroy {
   public selfID = 1
-  public selfIP = '127.0.0.1'
+  public selfIP = ''
   // @ts-ignore
   @ViewChild('scrollMe') private myScrollContainer: ElementRef;
   public message: string = '';
@@ -31,14 +31,17 @@ export class RoomComponent implements OnInit, AfterViewInit , OnDestroy {
         this.selfIP = val
       }
     )
+
     this.runner.chat.subscribe(val => {
       this.data = val;
     })
+    this.scrollToBottom()
   }
 
   ngAfterViewInit() {
     this.runner.fetchIp();
     this.runner.runner();
+
   }
   ngOnDestroy(){
       console.log('destroying')

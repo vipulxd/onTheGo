@@ -1,93 +1,109 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%;  }
-body { margin: 0;
-background-color: #ffffff !important;
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background-color: #00a0e0 !important;
+
 }
 
 @font-face {
-  font-family  : 'dos';
-  src: url('assets/dos.ttf') format('truetype');
+  font-family: 'dos';
+  src: url('assets/Satisfy-Regular.ttf') format('truetype');
 }
+
 * {
-  font-family : 'dos' !important ;
+  font-family: 'dos' !important;;
 }
-.color-dark{
+
+.color-dark {
   background-color: #181d2a !important;
-  color:white;
+  color: white;
 }
+
 .color-light {
   background-color: #2e74b7 !important;
-color: white;
+  color: white;
 }
-.border-light{
-  border : 1px solid #2e74b7;
+
+.border-light {
+  border: 1px solid #2e74b7;
   border-radius: 4px;
 }
-.text-large{
+
+.text-large {
   text-align: center;
-  color: #565454 !important;
-font-weight: bolder;
+  font-weight: bolder;
   font-size: xxx-large !important;
 }
-h1{
 
-  font-size : xxx-large;
+h1 {
+  font-size: xxx-large;
 }
-.button{
-  color: darkslategrey !important;
+
+.button {
 
   border: none;
-  border-radius: 4px;
-  height:3vh;
-  width:20vw;
-  font-size:large;
-.btn-send{
-  width:100% !important;
-}
-  background-color: white;
-  background: #e0e0e0;
-  box-shadow:  26px 26px 52px #9d9d9d,
-  -26px -26px 52px #ffffff;
+  border-radius: 2px;
+  height: 30px;
+  width: 20vw;
+  font-size: large;
+
+  .btn-send {
+    width: 100% !important;
+  }
+
+  background: #79e0a3 !important;
+  box-shadow: 20px 20px 60px #67be8b,
+  -20px -20px 60px #8bffbb !important;
 
 
 }
+
 .input {
   background-color: black;
   border-radius: 5px;
-  border : none;
+  border: none;
   background: #e0e0e0;
-  box-shadow:  26px 26px 52px #9d9d9d,
+  box-shadow: 26px 26px 52px #9d9d9d,
   -26px -26px 52px #ffffff;
 
-  height:5vh;
-  max-height:30px;
-  color: darkslategrey !important;
-  font-size:x-large;
-  text-align : center;
-  outline : none !important;
-:focus{
-  outline : none;
+  height: 5vh;
+  max-height: 30px;
+  font-size: x-large;
+  text-align: center;
+  outline: none !important;
+
+  :focus {
+    outline: none;
+  }
 }
-}
-a{
+
+a {
   text-decoration: none;
   color: inherit;
 }
+
 .cpt {
-  cursor :pointer;
+  cursor: pointer;
 }
+
 ::-webkit-scrollbar {
-  width: 0;  /* Remove scrollbar space */
-  background: transparent;  /* Optional: just make scrollbar invisible */
+  width: 0; /* Remove scrollbar space */
+  background: transparent; /* Optional: just make scrollbar invisible */
 }
+
 /* Optional: show position indicator in red */
 ::-webkit-scrollbar-thumb {
   background: #FF0000;
 }
+
 .card-style {
-  border-radius: 20px !important;
-  background: linear-gradient(315deg, #ffffff, #e6e6e6) !important;
-  box-shadow:  -26px -26px 52px #b3b3b3,
-  26px 26px 52px #ffffff !important;
+  border-radius: 50px !important;
+  background: #00a0e0 !important;
+  box-shadow: 20px 20px 61px #006086,
+  -20px -20px 61px #00e0ff !important;
 }

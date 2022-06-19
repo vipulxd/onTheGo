@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import {EventEmitter, Injectable } from '@angular/core';
 import { Router } from '@angular/router';
+import { environment } from 'src/environments/environment.prod';
 import { RunnerService } from './runner.service';
 
 @Injectable({
@@ -8,7 +9,7 @@ import { RunnerService } from './runner.service';
 })
 export class MessageService {
  public rname : string ='' ;
- private serverUrl = 'https://onthegobackend.herokuapp.com'
+ private serverUrl = environment.backendUrl
  public warningString : EventEmitter<string> = new EventEmitter<string>();
   constructor(private http : HttpClient,
               private router : Router,
@@ -18,7 +19,6 @@ public checkRoom(val : string) {
  let rname = val
     this.http.get(`${this.serverUrl}/hall/room/${rname}`).subscribe(
       (s)=>{
-          console.log(s)
         if(s){
           // @ts-ignore
           this.runner.roomName.emit(s.id);
@@ -35,7 +35,6 @@ public checkRoom(val : string) {
         }
       },
       (e)=>{
-        console.log(e)
         this.warningString.emit(e.error.status)
       }
     )
@@ -63,11 +62,8 @@ public createRoom(val: string){
 }
 public sendMessage(d : any){
     this.http.post(`${this.serverUrl}/chat/message`,d).subscribe(
-      val =>{
-        console.log(val)
-      },
+      () =>{},
       (e)=>{
-
         this.router.navigate(['/chat/hall'])
         this.warningString.emit('Room expired .')
       }
