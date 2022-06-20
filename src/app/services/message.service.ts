@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import {EventEmitter, Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
+import { ChatRoomModel } from '../model/chatRoomModel';
 import { RunnerService } from './runner.service';
 
 @Injectable({
@@ -42,7 +43,7 @@ public checkRoom(val : string) {
 public createRoom(val: string){
     let rname = val;
     let data = {"name":rname}
-  JSON.stringify(data);
+    JSON.stringify(data);
     this.http.post(`${this.serverUrl}/hall/room`,data).subscribe(
       (v)=>{
        // @ts-ignore
@@ -60,7 +61,7 @@ public createRoom(val: string){
       }
     )
 }
-public sendMessage(d : any){
+public sendMessage(d : ChatRoomModel  ){
     this.http.post(`${this.serverUrl}/chat/message`,d).subscribe(
       () =>{},
       (e)=>{
