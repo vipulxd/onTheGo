@@ -14,7 +14,7 @@ export class RoomComponent implements OnInit, AfterViewInit , OnDestroy {
   // @ts-ignore
   @ViewChild('scrollMe') private myScrollContainer: ElementRef;
   public message: string = '';
-  public data : [ChatRoomModel] | undefined ;
+  public data : [ChatRoomModel] | [] = [] ;
 
   constructor(private runner: RunnerService,
               private msgService: MessageService
