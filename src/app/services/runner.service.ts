@@ -4,6 +4,7 @@ import {Router} from '@angular/router';
 import {BehaviorSubject, Subject, Subscription} from 'rxjs';
 import {interval} from 'rxjs';
 import { environment } from 'src/environments/environment.prod';
+import { ChatRoomModel } from '../model/chatRoomModel';
 
 @Injectable({
     providedIn: 'root'
@@ -13,7 +14,7 @@ export class RunnerService {
     private serverUrl = environment.backendUrl
     private intervalSubs: Subscription = null
     ip: EventEmitter<string> = new EventEmitter<string>();
-    public chat: Subject<any> = new Subject<any>();
+    public chat: Subject<[ChatRoomModel]> = new Subject<[ChatRoomModel]>();
 
     constructor(private http: HttpClient,
                 private router: Router
@@ -24,18 +25,18 @@ export class RunnerService {
         this.roomName.emit(r);
     }
 
-    public runner() {
+    public runner() : void {
         let rname = localStorage.getItem('roomName')
         if (rname) {
             this.intervalSubs = interval(1500).subscribe(() => this.runnerRequest())
         }
     }
 
-    public runnerRequest() {
+    public runnerRequest() : void {
         let rname = localStorage.getItem('roomName')
         if (rname) {
             this.http.get(`${this.serverUrl}/chat/room/${rname}`).subscribe(
-                (d) => {
+                (d : [ChatRoomModel]) => {
                     this.chat.next(d);
                 },
                 (e) => {
@@ -47,17 +48,16 @@ export class RunnerService {
         }
     }
 
-    public stopRunner() {
+    public stopRunner() : void {
         if (this.intervalSubs) {
             this.intervalSubs.unsubscribe();
             this.intervalSubs = null;
         }
     }
 
-    public fetchIp() {
+    public fetchIp() : void {
         this.http.get(`${this.serverUrl}/getloc`).subscribe(
-            (val) => {
-                // @ts-ignore
+            (val : {ip: string}) => {
                 this.ip.emit(val.ip)
             }
         )

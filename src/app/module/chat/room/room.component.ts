@@ -1,4 +1,5 @@
 import {AfterViewInit, Component, ElementRef, OnDestroy, OnInit, ViewChild} from '@angular/core';
+import { ChatRoomModel } from 'src/app/model/chatRoomModel';
 import {MessageService} from 'src/app/services/message.service';
 import {RunnerService} from 'src/app/services/runner.service';
 
@@ -8,12 +9,12 @@ import {RunnerService} from 'src/app/services/runner.service';
   styleUrls: ['./room.component.scss']
 })
 export class RoomComponent implements OnInit, AfterViewInit , OnDestroy {
-  public selfID = 1
-  public selfIP = ''
+  public selfID : number = 1
+  public selfIP : string = ''
   // @ts-ignore
   @ViewChild('scrollMe') private myScrollContainer: ElementRef;
   public message: string = '';
-  public data = []
+  public data : [ChatRoomModel] | [] = [] ;
 
   constructor(private runner: RunnerService,
               private msgService: MessageService
@@ -31,9 +32,8 @@ export class RoomComponent implements OnInit, AfterViewInit , OnDestroy {
         this.selfIP = val
       }
     )
-
-    this.runner.chat.subscribe(val => {
-      this.data = val;
+    this.runner.chat.subscribe((response : [ChatRoomModel]) => {
+      this.data = response;
     })
     this.scrollToBottom()
   }

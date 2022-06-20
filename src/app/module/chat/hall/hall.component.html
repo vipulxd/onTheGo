@@ -2,13 +2,13 @@
   <div class="wrapper card-style" >
     <h1 class="text-large cpt" ><a [routerLink]="['/']">onTheGo</a></h1>
     <div class="border-green">
-        <div class="warning">If you dont like strangers then make sure your address is unique .</div>
+        <div class="warning" *ngIf="!isLoading">If you dont like strangers then make sure your address is unique .</div>
 
         <input *ngIf="!isLoading; else loader" class="input custom-input card-style" (keyup)="roomName($event)" placeholder="type your address">
     <div class="warning">{{warnString}}</div>
     </div>
-    <div class="btn-wrapper">
-      <button class="button card-style" (click)="createRoom()">CREATE</button>
+    <div class="btn-wrapper" *ngIf="!isLoading">
+      <button class="button card-style"  (click)="createRoom()">CREATE</button>
       <button class="button card-style"  (click)="checkRoom()" >JOIN
       </button>
     </div>
