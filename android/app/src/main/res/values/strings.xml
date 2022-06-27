@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">on-the-go</string>
+    <string name="title_activity_main">on-the-go</string>
+    <string name="package_name">com.onTheGo.app</string>
+    <string name="custom_url_scheme">com.onTheGo.app</string>
+</resources>

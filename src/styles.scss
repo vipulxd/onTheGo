@@ -1,0 +1,108 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background-color: #00a0e0 !important;
+
+}
+
+@font-face {
+  font-family: 'dos';
+  src: url('assets/Satisfy-Regular.ttf') format('truetype');
+}
+
+* {
+  font-family : "Courier New" !important;
+  font-weight: 550;
+}
+
+.color-dark {
+  background-color: #181d2a !important;
+  color: white;
+}
+
+.color-light {
+  background-color: #2e74b7 !important;
+  color: white;
+}
+
+.border-light {
+  border: 1px solid #2e74b7;
+  border-radius: 4px;
+}
+
+.text-large {
+  text-align: center;
+  font-weight: bolder;
+  font-size: xxx-large !important;
+}
+
+h1 {
+  font-size: xxx-large;
+}
+
+.button {
+
+  border: none;
+  border-radius: 2px !important;
+  height: 45px;
+  width: 20vw;
+  font-size: large;
+  .btn-send {
+    width: 100% !important;
+  }
+  background: #79e0a3 !important;
+  box-shadow: 20px 20px 60px #67be8b,
+  -20px -20px 60px #8bffbb !important;
+
+
+}
+
+.input {
+  background-color: black;
+  border-radius: 5px;
+  border: none;
+  background: #e0e0e0;
+  box-shadow: 26px 26px 52px #9d9d9d,
+  -26px -26px 52px #ffffff;
+
+  height: 5vh;
+  max-height: 46px;
+  font-size: x-large;
+  text-align: center;
+  outline: none !important;
+
+  :focus {
+    outline: none;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.cpt {
+  cursor: pointer;
+}
+
+::-webkit-scrollbar {
+  width: 0; /* Remove scrollbar space */
+  background: transparent; /* Optional: just make scrollbar invisible */
+}
+
+/* Optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+  background: #FF0000;
+}
+
+.card-style {
+  border-radius: 6px !important;
+  background: #00a0e0 !important;
+  box-shadow: 20px 20px 61px #006086,
+  -20px -20px 61px #00e0ff !important;
+}

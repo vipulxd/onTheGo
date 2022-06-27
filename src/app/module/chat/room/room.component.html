@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="exit-container cpt"><div class="ext-button "><a [routerLink]="['/chat/hall']"><button class="button card-style " ><- Exit</button></a></div>
+        <div class="IP-container card-style"><p>My Address {{selfIP}}</p></div>
+    </div>
+    <div class="message-container card-style" #scrollMe >
+        <div class="message" *ngIf="data.length >0 ; else loader">
+            <ng-container *ngFor="let item of data;" >
+                <div class="senderName" [ngStyle]="item.sender_ip == selfIP ? {'text-align':'right', 'color':'green'}:{'text-align':'left','color':'red'}">
+                    <p>{{item.sender_ip}} :</p></div>
+                <div class="text"
+                     [ngStyle]="{'text-align':item.sender_ip == selfIP ? 'right':'left'}">{{item.message}}</div>
+            </ng-container>
+        </div>
+    </div>
+    <div class="input-container ">
+        <div class="input-wrapper"><input class="input text-left card-style" placeholder="type something" (keyup.enter)="sendData();inpRef.value= ''" #inpRef (keyup)="setMessage($event , inpRef)"></div>
+        <div class="icon cpt"  ><button (click)="sendData();inpRef.value = ''"  class="button btn-send card-style">SEND</button></div>
+    </div>
+
+</div>
+<ng-template #loader>
+  <app-loader></app-loader>
+</ng-template>
